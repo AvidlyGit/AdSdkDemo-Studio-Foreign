@@ -1,0 +1,41 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.avidly.adsdk.demo">
+
+    <application
+        android:name=".MyApplication"
+        android:allowBackup="true"
+        android:label="广告SDK-demo" >
+        <activity
+            android:name=".MainActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Holo.Light" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".VideoActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Holo.Light" />
+        <activity
+            android:name=".BannerActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Holo.Light" />
+        <activity
+            android:name=".InterstitialActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Holo.Light" />
+        <activity
+            android:name=".ExitActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Holo.Light" />
+    </application>
+
+</manifest>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_margin="24dp"
+        android:gravity="center"
+        android:text="这是插屏广告展示，点击不同的广告位触发对应的插屏广告，广告调试页面用于帮助您了解应用广告位的配置以及加载情况"
+        android:textSize="20dp" />
+
+    <Button
+        android:id="@+id/buttonAAA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp"
+        android:text="广告位：inter_aaa" />
+
+    <Button
+        android:id="@+id/buttonBBB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp"
+        android:text="广告位：inter_bbb" />
+
+    <Button
+        android:id="@+id/btnDebugView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="48dp"
+        android:text="插屏广告调试页面" />
+
+</LinearLayout>

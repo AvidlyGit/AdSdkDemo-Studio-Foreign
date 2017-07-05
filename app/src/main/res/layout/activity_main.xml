@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_margin="48dp"
+        android:gravity="center"
+        android:text="广告SDK共分成四种广告类型，分别为banner，插屏，视频，退出广告，根据服务器配置信息进行展示"
+        android:textSize="20dp" />
+
+    <Button
+        android:id="@+id/btnBanner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="Banner广告" />
+
+    <Button
+        android:id="@+id/btnInterstitial"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="插屏广告" />
+
+    <Button
+        android:id="@+id/btnVideo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="视频广告" />
+
+    <Button
+        android:id="@+id/btnExit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="退出广告" />
+
+</LinearLayout>
