@@ -1,25 +1,95 @@
-# Add project specific ProGuard rules here.
-# By default, the flags in this file are appended to flags specified
-# in D:\Android-SDK\Sdk/tools/proguard/proguard-android.txt
-# You can edit the include path and order by changing the proguardFiles
-# directive in build.gradle.
-#
-# For more details, see
-#   http://developer.android.com/guide/developing/tools/proguard.html
 
-# Add any project specific keep options here:
+# avidly
+-keep class com.avidly.ads.** {*;}
+-keep class com.sm.avid.decode.** {*;}
+-keep class com.avidly.ads.unity.** {*;}
+-keep interface com.avidly.ads.** {*;}
+-keep interface com.sm.avid.decode.** {*;}
+-keepclasseswithmembernames class * {
+    native <methods>;
+}
+-dontwarn com.avidly.**
+# avidly end
 
-# If your project uses WebView with JS, uncomment the following
-# and specify the fully qualified class name to the JavaScript interface
-# class:
-#-keepclassmembers class fqcn.of.javascript.interface.for.webview {
-#   public *;
-#}
+# support
+-keep public class * extends android.support.v4.app.Fragment
+-dontwarn android.support.**
+# support end
 
-# Uncomment this to preserve the line number information for
-# debugging stack traces.
-#-keepattributes SourceFile,LineNumberTable
+# facebook
+-keep class com.facebook.ads.InterstitialAd
+-keep class com.facebook.ads.AdView
+-keep class com.facebook.ads.Ad
+-dontwarn com.facebook.ads.internal.**
+# facebook end
 
-# If you keep the line number information, uncomment this to
-# hide the original source file name.
-#-renamesourcefileattribute SourceFile
+# google
+-keep class * extends java.util.ListResourceBundle {
+    protected java.lang.Object[][] getContents();
+}
+-keep public class com.google.android.gms.common.internal.safeparcel.SafeParcelable {
+    public static final *** NULL;
+}
+-keepclassmembers enum * {
+  public static **[] values();
+  public static ** valueOf(java.lang.String);
+}
+-keepnames @com.google.android.gms.common.annotation.KeepName class *
+-keepclassmembernames class * {
+    @com.google.android.gms.common.annotation.KeepName *;
+}
+-keepnames class * implements android.os.Parcelable {
+    public static final ** CREATOR;
+}
+-keep class * extends java.util.ListResourceBundle {
+    protected java.lang.Object[][] getContents();
+}
+-keep class com.google.android.gms.ads.AdRequest
+-keep class com.google.android.gms.ads.reward.RewardedVideoAd
+-keep class com.google.android.gms.ads.InterstitialAd
+-keep class com.google.android.gms.ads.AdView
+-dontwarn com.google.android.gms.**
+# google end
+
+# adcolony
+-keep class com.adcolony.** { *; }
+-dontwarn com.adcolony.**
+-dontnote com.adcolony.**
+# adcolony end
+
+# vungle
+-keep class com.vungle.** { *; }
+-keep class javax.inject.*
+-keepattributes *Annotation*
+-keepattributes Signature
+-keep class dagger.*
+-dontwarn com.vungle.**
+-dontnote com.vungle.**
+# vungle end
+
+# mobvista
+-keepattributes Signature
+-keepattributes *Annotation*
+-keep class com.mobvista.** {*; }
+-keep interface com.mobvista.** {*; }
+-keep class android.support.v4.** { *; }
+-dontwarn com.mobvista.**
+-keep class **.R$* { public static final int mobvista*; }
+# mobvista end
+
+# unity
+-keepattributes SourceFile,LineNumberTable
+-keepattributes JavascriptInterface
+-keep class android.webkit.JavascriptInterface {*;}
+-keep class com.unity3d.ads.** {*;}
+# unity end
+
+# appnext
+-keep class com.appnext.** { *; }
+-dontwarn com.appnext.**
+# appnext end
+
+# applovin
+-keep class com.applovin.** { *; }
+-dontwarn com.applovin.**
+# applovin end
