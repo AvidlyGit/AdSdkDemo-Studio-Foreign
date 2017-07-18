@@ -57,14 +57,32 @@
 -dontnote com.adcolony.**
 # adcolony end
 
-# vungle
--keep class com.vungle.** { *; }
--keep class javax.inject.*
--keepattributes *Annotation*
--keepattributes Signature
--keep class dagger.*
+# Vungle
 -dontwarn com.vungle.**
 -dontnote com.vungle.**
+-keep class com.vungle.** { *; }
+-keep class javax.inject.*
+-dontwarn rx.internal.**
+-keep class rx.internal.**
+-dontwarn de.greenrobot.event.util.**
+-keepclassmembers class rx.internal.util.unsafe.*ArrayQueue*Field* {
+   long producerIndex;
+   long consumerIndex;
+}
+-keepclassmembers class rx.internal.util.unsafe.BaseLinkedQueueProducerNodeRef {
+   rx.internal.util.atomic.LinkedQueueNode producerNode;
+}
+-keepclassmembers class rx.internal.util.unsafe.BaseLinkedQueueConsumerNodeRef {
+   rx.internal.util.atomic.LinkedQueueNode consumerNode;
+}
+-keep class rx.schedulers.Schedulers { public static <methods>; }
+-keep class rx.schedulers.ImmediateScheduler { public <methods>; }
+-keep class rx.schedulers.TestScheduler { public <methods>; }
+-keep class rx.schedulers.Schedulers { public static ** test(); }
+-dontwarn com.moat.**
+-keep class com.moat.** {
+   public protected private *;
+}
 # vungle end
 
 # mobvista
@@ -75,6 +93,8 @@
 -keep class android.support.v4.** { *; }
 -dontwarn com.mobvista.**
 -keep class **.R$* { public static final int mobvista*; }
+-keep class com.alphab.** {*; }
+-keep interface com.alphab.** {*; }
 # mobvista end
 
 # unity
