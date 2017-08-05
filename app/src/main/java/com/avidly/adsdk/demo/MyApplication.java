@@ -1,6 +1,6 @@
 package com.avidly.adsdk.demo;
 
-import android.support.multidex.MultiDexApplication;
+import android.app.Application;
 
 import com.avidly.ads.AvidlyAdsSdk;
 
@@ -8,7 +8,7 @@ import com.avidly.ads.AvidlyAdsSdk;
  * Created by Holaverse on 2017/3/30.
  */
 
-public class MyApplication extends MultiDexApplication {
+public class MyApplication extends Application {
 
     @Override
     public void onCreate() {
