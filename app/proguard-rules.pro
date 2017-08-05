@@ -113,3 +113,13 @@
 -keep class com.applovin.** { *; }
 -dontwarn com.applovin.**
 # applovin end
+
+# chartboost
+-keep class com.chartboost.** { *; }
+-dontwarn com.chartboost.**
+# chartboost end
+
+# playable
+-keep class com.avidly.playableads.app.** { *; }
+# playable end
+
