@@ -33,7 +33,7 @@ dependencies {
     compile 'com.google.android.gms:play-services-ads:11.0.4'
     compile('com.facebook.android:audience-network-sdk:4.25.0')
 
-    compile(name: 'AvidlyAdsSdk_2.0.25', ext: 'aar')
+    compile(name: 'AvidlyAdsSdk_2.0.26', ext: 'aar')
 
     compile(name: 'adcolony_ads', ext: 'aar')
     compile(name: 'applovin_ads', ext: 'aar')
