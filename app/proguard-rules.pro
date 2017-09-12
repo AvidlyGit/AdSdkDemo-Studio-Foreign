@@ -1,14 +1,15 @@
 
 # avidly
 -keep class com.avidly.ads.** {*;}
+-keep class com.avidly.channel.** { *; }
 -keep class com.sm.avid.decode.** {*;}
--keep class com.avidly.ads.unity.** {*;}
 -keep interface com.avidly.ads.** {*;}
 -keep interface com.sm.avid.decode.** {*;}
 -keepclasseswithmembernames class * {
     native <methods>;
 }
 -dontwarn com.avidly.**
+-dontwarn net.vidageek.mirror.**
 # avidly end
 
 # support
@@ -20,6 +21,7 @@
 -keep class com.facebook.ads.InterstitialAd
 -keep class com.facebook.ads.AdView
 -keep class com.facebook.ads.Ad
+-keep class com.facebook.ads.RewardedVideoAd
 -dontwarn com.facebook.ads.internal.**
 # facebook end
 
@@ -120,6 +122,27 @@
 # chartboost end
 
 # playable
--keep class com.avidly.playableads.app.** { *; }
+-keep class com.avidly.playablead.app.** { *; }
 # playable end
+
+# ironsource
+-keep class com.ironsource.mediationsdk.IronSource
+-keepclassmembers class com.ironsource.sdk.controller.IronSourceWebView$JSInterface {
+    public *;
+}
+-keepclassmembers class * implements android.os.Parcelable {
+    public static final android.os.Parcelable$Creator *;
+}
+-keep public class com.google.android.gms.ads.** {
+   public *;
+}
+-keep class com.ironsource.adapters.** { *;
+}
+# ironsource end
+
+# vk
+-keep class com.my.target.** {*;}
+-dontwarn com.my.target.**
+-dontwarn com.mopub.**
+# vk end
 
