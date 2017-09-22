@@ -33,7 +33,7 @@ dependencies {
     compile 'com.google.android.gms:play-services-ads:11.0.4'
     compile('com.facebook.android:audience-network-sdk:4.25.0')
 
-    compile(name: 'AvidlyAdsSdk_2.0.29', ext: 'aar')
+    compile(name: 'AvidlyAdsSdk_2.0.30', ext: 'aar')
 
     compile(name: 'adcolony_ads', ext: 'aar')
     compile(name: 'applovin_ads', ext: 'aar')
@@ -45,4 +45,6 @@ dependencies {
     compile(name: 'playable_ads', ext: 'aar')
     compile(name: 'ironsource_ads', ext: 'aar')
     compile(name: 'vk_ads', ext: 'aar')
+    compile(name: 'inmobi_ads', ext: 'aar')
+    compile(name: 'batmobi_ads', ext: 'aar')
 }
