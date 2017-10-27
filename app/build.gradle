@@ -12,8 +12,19 @@ android {
 
         multiDexEnabled true
     }
+
+    signingConfigs {
+        release {
+            storeFile file('signature')
+            keyAlias 'key'
+            keyPassword '123456'
+            storePassword '123456'
+        }
+    }
+
     buildTypes {
         release {
+            signingConfig signingConfigs.release
             minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
@@ -29,6 +40,7 @@ repositories {
 dependencies {
     compile 'com.android.support:appcompat-v7:25.2.0'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'com.android.support:multidex:1.0.1'
 
     compile 'com.google.android.gms:play-services-ads:11.0.4'
     compile('com.facebook.android:audience-network-sdk:4.25.0')

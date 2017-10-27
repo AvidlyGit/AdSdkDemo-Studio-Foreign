@@ -7,3 +7,5 @@
 /build
 /captures
 .externalNativeBuild
+/app/signature
+key_store.jks

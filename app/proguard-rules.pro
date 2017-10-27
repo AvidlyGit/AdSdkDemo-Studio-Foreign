@@ -10,6 +10,7 @@
 }
 -dontwarn com.avidly.**
 -dontwarn net.vidageek.mirror.**
+-keep class com.statistics.channel.* {*;}
 # avidly end
 
 # support
@@ -50,6 +51,7 @@
 -keep class com.google.android.gms.ads.reward.RewardedVideoAd
 -keep class com.google.android.gms.ads.InterstitialAd
 -keep class com.google.android.gms.ads.AdView
+-keep class com.google.android.gms.common.** {*;}
 -dontwarn com.google.android.gms.**
 # google end
 
@@ -146,3 +148,27 @@
 -dontwarn com.mopub.**
 # vk end
 
+# batmobi
+-keep class com.batmobi.** { *;}
+# batmobi end
+
+# inmobi
+-keepattributes SourceFile,LineNumberTable
+-keep class com.inmobi.** { *; }
+-dontwarn com.inmobi.**
+-keep public class com.google.android.gms.**
+-dontwarn com.google.android.gms.**
+-dontwarn com.squareup.picasso.**
+-keep class com.google.android.gms.ads.identifier.AdvertisingIdClient{
+     public *;
+}
+-keep class com.google.android.gms.ads.identifier.AdvertisingIdClient$Info{
+     public *;
+}
+-keep class com.squareup.picasso.** {*;}
+-dontwarn com.squareup.picasso.**
+-dontwarn com.squareup.okhttp.**
+-keep class com.moat.** {*;}
+-dontwarn com.moat.**
+-keep class com.integralads.avid.library.* {*;}
+# inmobi end
