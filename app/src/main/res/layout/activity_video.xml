@@ -19,7 +19,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="24dp"
         android:gravity="center_horizontal"
-        android:text="这是视频广告展示，点击开始游戏进入游戏，游戏结束后如果广告加载成功，可以点击播放按钮观看视频，观看完毕后获得奖励，广告调试页面用于帮助您了解视频广告的配置以及加载情况"
+        android:text="这是视频广告展示，点击开始游戏进入游戏，游戏结束后如果广告加载成功，可以点击播放按钮观看视频，观看完毕后获得奖励，广告调试页面用于帮助您了解视频广告的配置以及加载情况，请左右滑动切换广告位"
         android:textSize="20dp" />
 
     <TextView

@@ -4,7 +4,7 @@ android {
     compileSdkVersion 25
     buildToolsVersion "25.0.3"
     defaultConfig {
-        applicationId "com.avidly.adsdk.demo"
+        applicationId "com.holaverse.queenslots.casino.free"
         minSdkVersion 15
         targetSdkVersion 25
         versionCode 1
@@ -43,20 +43,29 @@ dependencies {
     compile 'com.android.support:multidex:1.0.1'
 
     compile 'com.google.android.gms:play-services-ads:11.0.4'
-    compile('com.facebook.android:audience-network-sdk:4.25.0')
+//    compile('com.facebook.android:audience-network-sdk:4.25.0')
 
-    compile(name: 'AvidlyAdsSdk_2.0.33', ext: 'aar')
+    compile(name: 'AvidlyAdsSdk_3.0.01', ext: 'aar')
+    compile(name: 'gson-2.7', ext: 'jar')
 
     compile(name: 'adcolony_ads', ext: 'aar')
     compile(name: 'applovin_ads', ext: 'aar')
-    compile(name: 'mobvista_ads', ext: 'aar')
-    compile(name: 'unity_ads', ext: 'aar')
-    compile(name: 'vungle_ads', ext: 'aar')
     compile(name: 'appnext_ads', ext: 'aar')
-    compile(name: 'chartboost_ads', ext: 'aar')
-    compile(name: 'playable_ads', ext: 'aar')
-    compile(name: 'ironsource_ads', ext: 'aar')
-    compile(name: 'vk_ads', ext: 'aar')
-    compile(name: 'inmobi_ads', ext: 'aar')
     compile(name: 'batmobi_ads', ext: 'aar')
+    compile(name: 'centrixlink_ads', ext: 'aar')
+    compile(name: 'chartboost_ads', ext: 'aar')
+    compile(name: 'domob_ads', ext: 'aar')
+    compile(name: 'facebook_ads', ext: 'aar')
+    compile(name: 'facebook_exo_player', ext: 'aar')
+    compile(name: 'inmobi_ads', ext: 'aar')
+    compile(name: 'ironsource_ads', ext: 'aar')
+    compile(name: 'maio_ads', ext: 'aar')
+    compile(name: 'mobvista_ads', ext: 'aar')
+    compile(name: 'oneway_ads', ext: 'aar')
+    compile(name: 'playable_ads', ext: 'aar')
+    compile(name: 'tapjoy_ads', ext: 'aar')
+    compile(name: 'unity_ads', ext: 'aar')
+    compile(name: 'vk_ads', ext: 'aar')
+    compile(name: 'vungle_ads', ext: 'aar')
+    compile(name: 'youappi_ads', ext: 'aar')
 }
