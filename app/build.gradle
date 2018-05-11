@@ -45,7 +45,7 @@ dependencies {
     compile 'com.google.android.gms:play-services-ads:11.0.4'
 //    compile('com.facebook.android:audience-network-sdk:4.25.0')
 
-    compile(name: 'AvidlyAdsSdk_3.0.01', ext: 'aar')
+    compile(name: 'UPAdsSdk_3.0.03', ext: 'aar')
     compile(name: 'gson-2.7', ext: 'jar')
 
     compile(name: 'adcolony_ads', ext: 'aar')
@@ -68,4 +68,7 @@ dependencies {
     compile(name: 'vk_ads', ext: 'aar')
     compile(name: 'vungle_ads', ext: 'aar')
     compile(name: 'youappi_ads', ext: 'aar')
+    compile(name: 'youlan_ads', ext: 'aar')
+    compile(name: 'amazon_ads', ext: 'aar')
 }
+

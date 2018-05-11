@@ -1,14 +1,13 @@
-package com.avidly.adsdk.demo;
-
-import com.avidly.ads.AvidlyExitAd;
-import com.avidly.ads.wrapper.exit.AvidlyExitAdListener;
-import com.avidly.adsdk.demo.R;
+package com.up.adsdk.demo;
 
 import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.up.ads.UPExitAd;
+import com.up.ads.wrapper.exit.UPExitAdListener;
 
 /**
  * Created by Holaverse on 2017/4/25.
@@ -17,7 +16,7 @@ import android.widget.Toast;
 public class ExitActivity extends Activity {
 	private static final String TAG = "AdsSdk_demo";
 
-	AvidlyExitAd mAvidlyExitAd;
+	UPExitAd mUpExitAd;
 	TextView mTextView;
 
 	@Override
@@ -26,32 +25,32 @@ public class ExitActivity extends Activity {
 		setContentView(R.layout.activity_exit);
 		mTextView = (TextView) findViewById(R.id.text);
 
-		mAvidlyExitAd = AvidlyExitAd.getInstance(ExitActivity.this);
-		mAvidlyExitAd.setAvidlyExitAdListener(new AvidlyExitAdListener() {
+		mUpExitAd = UPExitAd.getInstance(ExitActivity.this);
+		mUpExitAd.setUpExitAdListener(new UPExitAdListener() {
 			@Override
 			public void onClicked() {
-				Log.i(TAG, "mAvidlyExitAd onClicked");
+				Log.i(TAG, "mUpExitAd onClicked");
 			}
 
 			@Override
 			public void onClickedMore() {
-				Log.i(TAG, "mAvidlyExitAd onClickedMore");
+				Log.i(TAG, "mUpExitAd onClickedMore");
 			}
 
 			@Override
 			public void onDisplayed() {
-				Log.i(TAG, "mAvidlyExitAd onDisplayed");
+				Log.i(TAG, "mUpExitAd onDisplayed");
 			}
 
 			@Override
 			public void onExit() {
-				Log.i(TAG, "mAvidlyExitAd onExit");
+				Log.i(TAG, "mUpExitAd onExit");
 				finish();
 			}
 
 			@Override
 			public void onCancel() {
-				Log.i(TAG, "mAvidlyExitAd onCancel");
+				Log.i(TAG, "mUpExitAd onCancel");
 				mTextView.setText("游戏中... ...");
 			}
 		});
@@ -67,7 +66,7 @@ public class ExitActivity extends Activity {
 
 	@Override
 	public void onBackPressed() {
-		if (mAvidlyExitAd != null && mAvidlyExitAd.isReady()) {
+		if (mUpExitAd != null && mUpExitAd.isReady()) {
 			runOnUiThread(new Runnable() {
 				@Override
 				public void run() {
@@ -75,13 +74,13 @@ public class ExitActivity extends Activity {
 				}
 			});
 
-			mAvidlyExitAd.show();
+			mUpExitAd.show();
 		} else {
-			Log.i(TAG, "mAvidlyExitAd.isReady() not match");
+			Log.i(TAG, "mUpExitAd.isReady() not match");
 			runOnUiThread(new Runnable() {
 				@Override
 				public void run() {
-					Toast.makeText(ExitActivity.this, "mAvidlyExitAd.isReady() not match", Toast.LENGTH_LONG).show();
+					Toast.makeText(ExitActivity.this, "mUpExitAd.isReady() not match", Toast.LENGTH_LONG).show();
 					ExitActivity.super.onBackPressed();
 				}
 			});

@@ -1,11 +1,11 @@
-package com.avidly.adsdk.demo;
+package com.up.adsdk.demo;
 
 import android.app.Application;
 import android.content.Context;
 import android.os.Build;
 import android.support.multidex.MultiDex;
 
-import com.avidly.ads.AvidlyAdsSdk;
+import com.up.ads.UPAdsSdk;
 
 /**
  * Created by Holaverse on 2017/3/30.
@@ -26,6 +26,6 @@ public class MyApplication extends Application {
     public void onCreate() {
         super.onCreate();
 
-        AvidlyAdsSdk.setDebuggable(true);
+        UPAdsSdk.setDebuggable(true);
     }
 }

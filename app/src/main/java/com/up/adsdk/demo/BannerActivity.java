@@ -1,13 +1,12 @@
-package com.avidly.adsdk.demo;
-
-import com.avidly.ads.AvidlyBannerAd;
-import com.avidly.ads.AvidlyRectangleAd;
-import com.avidly.ads.wrapper.banner.AvidlyBannerAdListener;
-import com.avidly.adsdk.demo.R;
+package com.up.adsdk.demo;
 
 import android.app.Activity;
 import android.os.Bundle;
 import android.widget.LinearLayout;
+
+import com.up.ads.UPBannerAd;
+import com.up.ads.UPRectangleAd;
+import com.up.ads.wrapper.banner.UPBannerAdListener;
 
 public class BannerActivity extends Activity {
 	private static final String TAG = "AdsSdk_demo";
@@ -15,16 +14,16 @@ public class BannerActivity extends Activity {
 	LinearLayout banner_container;
 	LinearLayout rectangle_container;
 
-	AvidlyBannerAd mBannerAd;
-	AvidlyRectangleAd mRectangleAd;
+	UPBannerAd mBannerAd;
+	UPRectangleAd mRectangleAd;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_banner);
 
-		mBannerAd = new AvidlyBannerAd(BannerActivity.this, "banner_aaa");
-		mBannerAd.setAvidlyBannerAdListener(new AvidlyBannerAdListener() {
+		mBannerAd = new UPBannerAd(BannerActivity.this, "banner_aaa");
+		mBannerAd.setUpBannerAdListener(new UPBannerAdListener() {
 			@Override
 			public void onClicked() {
 				// 此处为广告点击的回调
@@ -36,8 +35,8 @@ public class BannerActivity extends Activity {
 			}
 		});
 
-		mRectangleAd = new AvidlyRectangleAd(BannerActivity.this, "banner_bbb");
-		mRectangleAd.setAvidlyBannerAdListener(new AvidlyBannerAdListener() {
+		mRectangleAd = new UPRectangleAd(BannerActivity.this, "banner_bbb");
+		mRectangleAd.setUpBannerAdListener(new UPBannerAdListener() {
 			@Override
 			public void onClicked() {
 

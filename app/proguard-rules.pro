@@ -1,15 +1,22 @@
 
 # avidly
 -keep class com.avidly.ads.** {*;}
+-keep class com.up.ads.** {*;}
+-keep interface com.up.ads.** {*;}
 -keep class com.avidly.channel.** { *; }
+-keep class com.up.channel.** { *; }
 -keep class com.sm.avid.decode.** {*;}
 -keep class com.avidly.playablead.ext.** {*;}
 -keep interface com.avidly.ads.** {*;}
 -keep interface com.sm.avid.decode.** {*;}
+-keep class com.hola.sdk.* {*;}
+-keep class com.statistics.channel.* {*;}
+-keep class com.aly.analysis.sdk.api.* {*;}
 -keepclasseswithmembernames class * {
     native <methods>;
 }
 -dontwarn com.avidly.**
+-dontwarn com.up.**
 -keep class com.statistics.channel.* {*;}
 # avidly end
 
@@ -58,6 +65,7 @@
 -keep class com.google.android.gms.ads.reward.RewardedVideoAd
 -keep class com.google.android.gms.ads.InterstitialAd
 -keep class com.google.android.gms.ads.AdView
+-keep class com.google.android.gms.ads.identifier.AdvertisingIdClient
 -keep class com.google.android.gms.common.** {*;}
 -dontwarn com.google.android.gms.**
 -dontwarn com.google.protobuf.**
@@ -69,7 +77,7 @@
 -dontnote com.adcolony.**
 # adcolony end
 
-# Vungle
+# vungle
 -dontwarn com.vungle.**
 -dontnote com.vungle.**
 -keep class com.vungle.** { *; }
@@ -271,12 +279,14 @@
 # youappi
 -keep class com.google.gson.**{ *;}
 -keep class com.google.android.gms.**{*;}
--keep class com.youappi.ai.sdk.**{*;}
--keep interface com.youappi.ai.sdk.**{*;}
--keep enum com.youappi.ai.sdk.**{*;}
+-keep class com.youappi.sdk.**{*;}
+-keep interface com.youappi.sdk.**{*;}
+-keep enum com.youappi.sdk.**{*;}
 -keepclassmembers class * {
    @android.webkit.JavascriptInterface <methods>;
 }
+-dontwarn com.youappi.sdk.**
+-dontwarn com.ai.t.network.**
 # youappi end
 
 # tapjoy
@@ -305,4 +315,18 @@ public static final ** CREATOR;
 -keep class com.centrixlink.**  { *; }
 # centrixlink end
 
+# youlan
+-keep class com.youlan.youlansdk.** { *;}
+# youlan end
 
+# toutiao
+-keep class com.bytedance.sdk.openadsdk.** { *; }
+-keep class com.androidquery.callback.** {*;}
+-dontwarn com.bytedance.sdk.**
+-dontwarn com.androidquery.**
+-dontwarn com.ss.android.**
+# toutiao end
+
+# amazon
+-keep class com.amazon.device.ads.** { *; }
+# amazon end

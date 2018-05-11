@@ -1,4 +1,4 @@
-package com.avidly.adsdk.demo;
+package com.up.adsdk.demo;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -6,7 +6,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import com.avidly.ads.AvidlyAdsSdk;
+import com.up.ads.UPAdsSdk;
+import com.up.ads.tool.AccessPrivacyInfoManager;
 
 public class MainActivity extends Activity {
     private static final String TAG = "AdsSdk_demo";
@@ -21,7 +22,18 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        AvidlyAdsSdk.init(this, AvidlyAdsSdk.AvidlyAdsGlobalZone.AvidlyAdsGlobalZoneForeign);
+        UPAdsSdk.isEuropeanUnionUser(this, new UPAdsSdk.UPEuropeanUnionUserCheckCallBack() {
+            @Override
+            public void isEuropeanUnionUser(boolean isEuropeanUnionUser) {
+                if (isEuropeanUnionUser) {
+                    //这是GDPR第一种授权方式
+                    UPAdsSdk.updateAccessPrivacyInfoStatus(MainActivity.this, AccessPrivacyInfoManager.UPAccessPrivacyInfoStatusEnum.UPAccessPrivacyInfoStatusAccepted);
+                    UPAdsSdk.init(MainActivity.this, UPAdsSdk.UPAdsGlobalZone.UPAdsGlobalZoneForeign);
+                } else {
+                    UPAdsSdk.init(MainActivity.this, UPAdsSdk.UPAdsGlobalZone.UPAdsGlobalZoneForeign);
+                }
+            }
+        });
 
         btnBanner = (Button) findViewById(R.id.btnBanner);
         btnBanner.setOnClickListener(new View.OnClickListener() {
