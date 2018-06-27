@@ -1,8 +1,8 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 25
-    buildToolsVersion "25.0.3"
+    compileSdkVersion 26
+    buildToolsVersion "26.0.1"
     defaultConfig {
         applicationId "com.holaverse.queenslots.casino.free"
         minSdkVersion 15
@@ -38,19 +38,21 @@ repositories {
 }
 
 dependencies {
-    compile 'com.android.support:appcompat-v7:25.2.0'
+    compile 'com.android.support:appcompat-v7:26.1.0'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     compile 'com.android.support:multidex:1.0.1'
 
-    compile 'com.google.android.gms:play-services-ads:11.0.4'
+    compile 'com.google.android.gms:play-services-ads:15.0.1'
 //    compile('com.facebook.android:audience-network-sdk:4.25.0')
 
-    compile(name: 'UPAdsSdk_3.0.03', ext: 'aar')
+    compile(name: 'UPAdsSdk_3.0.04', ext: 'aar')
     compile(name: 'gson-2.7', ext: 'jar')
 
     compile(name: 'adcolony_ads', ext: 'aar')
+    compile(name: 'amazon_ads', ext: 'aar')
     compile(name: 'applovin_ads', ext: 'aar')
     compile(name: 'appnext_ads', ext: 'aar')
+    compile(name: 'appnext_core', ext: 'aar')
     compile(name: 'batmobi_ads', ext: 'aar')
     compile(name: 'centrixlink_ads', ext: 'aar')
     compile(name: 'chartboost_ads', ext: 'aar')
@@ -60,6 +62,7 @@ dependencies {
     compile(name: 'inmobi_ads', ext: 'aar')
     compile(name: 'ironsource_ads', ext: 'aar')
     compile(name: 'maio_ads', ext: 'aar')
+    compile(name: 'mobpower_ads', ext: 'aar')
     compile(name: 'mobvista_ads', ext: 'aar')
     compile(name: 'oneway_ads', ext: 'aar')
     compile(name: 'playable_ads', ext: 'aar')
@@ -69,6 +72,5 @@ dependencies {
     compile(name: 'vungle_ads', ext: 'aar')
     compile(name: 'youappi_ads', ext: 'aar')
     compile(name: 'youlan_ads', ext: 'aar')
-    compile(name: 'amazon_ads', ext: 'aar')
 }
 
