@@ -45,7 +45,7 @@ dependencies {
     compile 'com.google.android.gms:play-services-ads:15.0.1'
 //    compile('com.facebook.android:audience-network-sdk:4.25.0')
 
-    compile(name: 'UPAdsSdk_3.0.04', ext: 'aar')
+    compile(name: 'UPAdsSdk_3.0.05', ext: 'aar')
     compile(name: 'gson-2.7', ext: 'jar')
 
     compile(name: 'adcolony_ads', ext: 'aar')
