@@ -15,7 +15,6 @@ public class MainActivity extends Activity {
     Button btnVideo;
     Button btnBanner;
     Button btnInterstitial;
-    Button btnExit;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,13 +61,5 @@ public class MainActivity extends Activity {
             }
         });
 
-        btnExit = (Button) findViewById(R.id.btnExit);
-        btnExit.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, ExitActivity.class);
-                startActivity(intent);
-            }
-        });
     }
 }

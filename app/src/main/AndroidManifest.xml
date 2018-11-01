@@ -1,15 +1,15 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.up.adsdk.demo">
+    package="com.up.adsdk.demo">
 
     <application
         android:name="com.up.adsdk.demo.MyApplication"
         android:allowBackup="true"
-        android:label="广告SDK-demo" >
+        android:label="广告Demo_海外">
         <activity
             android:name="com.up.adsdk.demo.MainActivity"
             android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
             android:screenOrientation="portrait"
-            android:theme="@android:style/Theme.Holo.Light" >
+            android:theme="@android:style/Theme.Holo.Light">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
