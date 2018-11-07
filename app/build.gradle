@@ -4,7 +4,7 @@ android {
     compileSdkVersion 26
     buildToolsVersion "26.0.1"
     defaultConfig {
-        applicationId "com.holaverse.queenslots.casino.free"
+        applicationId "adam.lean.foreign"
         minSdkVersion 15
         targetSdkVersion 26
         versionCode 1
@@ -45,7 +45,8 @@ dependencies {
     compile 'com.google.android.gms:play-services-ads:16.0.0'
 
     compile(name: 'UPAdsSdk_3.0.06_foreign', ext: 'aar')
-    compile(name: 'gson-2.7', ext: 'jar')
+    compile(name: 'gson-2.7', ext: 'jar') // for vungle and youappi
+    compile(name: 'palette-v7-26.1.0', ext: 'aar') // for dap
 
     compile(name: 'adcolony_ads', ext: 'aar')
     compile(name: 'amazon_ads', ext: 'aar')
@@ -65,6 +66,5 @@ dependencies {
     compile(name: 'youappi_ads', ext: 'aar')
     compile(name: 'dap_ads_cw', ext: 'aar')
     compile(name: 'dap_ads_vd', ext: 'aar')
-    compile(name: 'palette-v7-26.1.0', ext: 'aar')
 }
 

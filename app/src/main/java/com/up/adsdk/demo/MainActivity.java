@@ -10,8 +10,6 @@ import com.up.ads.UPAdsSdk;
 import com.up.ads.tool.AccessPrivacyInfoManager;
 
 public class MainActivity extends Activity {
-    private static final String TAG = "AdsSdk_demo";
-
     Button btnVideo;
     Button btnBanner;
     Button btnInterstitial;
@@ -34,7 +32,7 @@ public class MainActivity extends Activity {
             }
         });
 
-        btnBanner = (Button) findViewById(R.id.btnBanner);
+        btnBanner = findViewById(R.id.btnBanner);
         btnBanner.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -43,7 +41,7 @@ public class MainActivity extends Activity {
             }
         });
 
-        btnInterstitial = (Button) findViewById(R.id.btnInterstitial);
+        btnInterstitial = findViewById(R.id.btnInterstitial);
         btnInterstitial.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -52,7 +50,7 @@ public class MainActivity extends Activity {
             }
         });
 
-        btnVideo = (Button) findViewById(R.id.btnVideo);
+        btnVideo = findViewById(R.id.btnVideo);
         btnVideo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

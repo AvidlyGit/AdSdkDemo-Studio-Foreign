@@ -18,10 +18,10 @@ public class VideoActivity extends Activity {
     private static final String TAG = "AdsSdk_demo";
     private int coins;
 
-    Button btnPlay;
-    Button btnVideo;
-    TextView text;
-    TextView coin;
+    Button mBtnPlay;
+    Button mBtnVideo;
+    TextView mText;
+    TextView mCoin;
     Button mBtnDebugView;
 
     UPRewardVideoAd mVideoAd;
@@ -31,25 +31,25 @@ public class VideoActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_video);
 
-        btnPlay = (Button) findViewById(R.id.btnPlay);
-        btnVideo = (Button) findViewById(R.id.btnVideo);
-        text = (TextView) findViewById(R.id.text);
-        coin = (TextView) findViewById(R.id.coin);
-        mBtnDebugView = (Button) findViewById(R.id.btnDebugView);
+        mBtnPlay = findViewById(R.id.btnPlay);
+        mBtnVideo = findViewById(R.id.btnVideo);
+        mText = findViewById(R.id.text);
+        mCoin = findViewById(R.id.coin);
+        mBtnDebugView = findViewById(R.id.btnDebugView);
 
-        btnVideo.setEnabled(false);
+        mBtnVideo.setEnabled(false);
         coins = 0;
 
         mVideoAd = UPRewardVideoAd.getInstance(VideoActivity.this);
         mVideoAd.setUpVideoAdListener(new UPRewardVideoAdListener() {
             @Override
             public void onVideoAdClicked() {
-                Log.i(TAG, "onVideoAdClicked: ");
+                Log.i(TAG, "mVideoAd is clicked");
             }
 
             @Override
             public void onVideoAdClosed() {
-                Log.i(TAG, "onVideoAdClosed: ");
+                Log.i(TAG, "mVideoAd is closed");
 
                 if (mVideoAd.isReady()) {
                     new Handler(getMainLooper()).post(new Runnable() {
@@ -68,40 +68,40 @@ public class VideoActivity extends Activity {
                         }
                     });
                 } else {
-                    btnVideo.setEnabled(false);
+                    mBtnVideo.setEnabled(false);
                 }
             }
 
             @Override
             public void onVideoAdDisplayed() {
-                Log.i(TAG, "onVideoAdDisplayed: ");
+                Log.i(TAG, "mVideoAd is displayed");
             }
 
             @Override
             public void onVideoAdReward() {
-                Log.i(TAG, "onVideoAdReward: ");
+                Log.i(TAG, "mVideoAd is rewarded");
 
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
                         coins = coins + 300;
-                        coin.setText(coins + " coins");
+                        mCoin.setText(coins + " coins");
                     }
                 });
             }
 
             @Override
             public void onVideoAdDontReward(String reason) {
-                Log.i(TAG, "onVideoAdDontReward: " + reason);
+                Log.i(TAG, "mVideoAd is not rewarded: " + reason);
             }
         });
 
-        btnPlay.setOnClickListener(new View.OnClickListener() {
+        mBtnPlay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                btnPlay.setText("游戏中 ... ...");
-                btnPlay.setEnabled(false);
-                btnVideo.setEnabled(false);
+                mBtnPlay.setText("游戏中 ... ...");
+                mBtnPlay.setEnabled(false);
+                mBtnVideo.setEnabled(false);
 
                 new Handler(getMainLooper()).postDelayed(new Runnable() {
                     @Override
@@ -113,10 +113,10 @@ public class VideoActivity extends Activity {
             }
         });
 
-        btnVideo.setOnClickListener(new View.OnClickListener() {
+        mBtnVideo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                btnPlay.setText("开始游戏");
+                mBtnPlay.setText("开始游戏");
 
                 final AlertDialog.Builder builder = new AlertDialog.Builder(VideoActivity.this);
                 builder.setTitle("Game Over");
@@ -134,9 +134,7 @@ public class VideoActivity extends Activity {
         mBtnDebugView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (mVideoAd != null) {
-                    mVideoAd.showVideoDebugActivity(VideoActivity.this);
-                }
+                UPRewardVideoAd.showVideoDebugActivity(VideoActivity.this);
             }
         });
     }
@@ -150,14 +148,14 @@ public class VideoActivity extends Activity {
     }
 
     private void gameOver() {
-        btnPlay.setText("游戏结束");
-        btnPlay.setEnabled(true);
+        mBtnPlay.setText("游戏结束");
+        mBtnPlay.setEnabled(true);
 
         if (mVideoAd.isReady()) {
-            btnVideo.setEnabled(true);
+            mBtnVideo.setEnabled(true);
         } else {
             Toast.makeText(this, "视频广告没有加载成功", Toast.LENGTH_SHORT).show();
-            btnVideo.setEnabled(false);
+            mBtnVideo.setEnabled(false);
         }
     }
 

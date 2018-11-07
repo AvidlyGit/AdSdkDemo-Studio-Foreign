@@ -12,72 +12,41 @@ import com.up.ads.wrapper.interstitial.UPInterstitialAdListener;
 public class InterstitialActivity extends Activity {
     private static final String TAG = "AdsSdk_demo";
 
-    UPInterstitialAd mInterstitialAdAAA;
-    UPInterstitialAd mInterstitialAdBBB;
-
-    Button mButtonAAA;
-    Button mButtonBBB;
+    UPInterstitialAd mInterstitialAd;
     Button mBtnDebugView;
+    Button mButtonShow;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_interstitial);
 
-        mInterstitialAdAAA = new UPInterstitialAd(InterstitialActivity.this, "inter_aaa");
-        mInterstitialAdAAA.setUpInterstitialAdListener(new UPInterstitialAdListener() {
+        mInterstitialAd = new UPInterstitialAd(InterstitialActivity.this, "sample_inter_foreign");
+        mInterstitialAd.setUpInterstitialAdListener(new UPInterstitialAdListener() {
             @Override
             public void onClicked() {
-                Log.i(TAG, "mInterstitialAdAAA is clicked");
+                Log.i(TAG, "mInterstitialAd is clicked");
             }
 
             @Override
             public void onClosed() {
-                Log.i(TAG, "mInterstitialAdAAA is closed");
+                Log.i(TAG, "mInterstitialAd is closed");
             }
 
             @Override
             public void onDisplayed() {
-                Log.i(TAG, "mInterstitialAdAAA is displayed");
+                Log.i(TAG, "mInterstitialAd is displayed");
             }
         });
 
-        mInterstitialAdBBB = new UPInterstitialAd(InterstitialActivity.this, "inter_bbb");
-        mInterstitialAdBBB.setUpInterstitialAdListener(new UPInterstitialAdListener() {
-            @Override
-            public void onClicked() {
-                Log.i(TAG, "mInterstitialAdBBB is clicked");
-            }
+        mButtonShow = findViewById(R.id.buttonShow);
+        mBtnDebugView = findViewById(R.id.btnDebugView);
 
-            @Override
-            public void onClosed() {
-                Log.i(TAG, "mInterstitialAdBBB is closed");
-            }
-
-            @Override
-            public void onDisplayed() {
-                Log.i(TAG, "mInterstitialAdBBB is displayed");
-            }
-        });
-
-        mButtonAAA = (Button) findViewById(R.id.buttonAAA);
-        mButtonBBB = (Button) findViewById(R.id.buttonBBB);
-        mBtnDebugView = (Button) findViewById(R.id.btnDebugView);
-
-        mButtonAAA.setOnClickListener(new View.OnClickListener() {
+        mButtonShow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (mInterstitialAdAAA != null && mInterstitialAdAAA.isReady()) {
-                    mInterstitialAdAAA.show();
-                }
-            }
-        });
-
-        mButtonBBB.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if (mInterstitialAdBBB != null && mInterstitialAdBBB.isReady()) {
-                    mInterstitialAdBBB.show();
+                if (mInterstitialAd != null && mInterstitialAd.isReady()) {
+                    mInterstitialAd.show();
                 }
             }
         });
@@ -85,9 +54,7 @@ public class InterstitialActivity extends Activity {
         mBtnDebugView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (mInterstitialAdAAA != null) {
-                    mInterstitialAdAAA.showInterstitialDebugActivity(InterstitialActivity.this);
-                }
+                UPInterstitialAd.showInterstitialDebugActivity(InterstitialActivity.this);
             }
         });
     }
