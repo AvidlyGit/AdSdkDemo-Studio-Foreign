@@ -11,6 +11,10 @@ android {
         versionName "1.0"
 
         multiDexEnabled true
+
+        ndk {
+            abiFilters 'armeabi-v7a', 'x86'
+        }
     }
 
     signingConfigs {
@@ -25,7 +29,7 @@ android {
     buildTypes {
         release {
             signingConfig signingConfigs.release
-            minifyEnabled true
+            minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }

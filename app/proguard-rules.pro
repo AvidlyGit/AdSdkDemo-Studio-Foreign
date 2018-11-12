@@ -61,11 +61,7 @@
 -keep class * extends java.util.ListResourceBundle {
     protected java.lang.Object[][] getContents();
 }
--keep class com.google.android.gms.ads.AdRequest
--keep class com.google.android.gms.ads.reward.RewardedVideoAd
--keep class com.google.android.gms.ads.InterstitialAd
--keep class com.google.android.gms.ads.AdView
--keep class com.google.android.gms.ads.identifier.AdvertisingIdClient
+-keep class com.google.android.gms.ads.** {*;}
 -keep class com.google.android.gms.common.** {*;}
 -dontwarn com.google.android.gms.**
 -dontwarn com.google.protobuf.**
@@ -78,48 +74,42 @@
 # adcolony end
 
 # vungle
--dontwarn com.vungle.**
--dontnote com.vungle.**
--keep class com.vungle.** { *; }
--keep class javax.inject.*
--dontwarn rx.internal.**
--keep class rx.internal.**
--dontwarn de.greenrobot.event.util.**
--keepclassmembers class rx.internal.util.unsafe.*ArrayQueue*Field* {
-   long producerIndex;
-   long consumerIndex;
-}
--keepclassmembers class rx.internal.util.unsafe.BaseLinkedQueueProducerNodeRef {
-   rx.internal.util.atomic.LinkedQueueNode producerNode;
-}
--keepclassmembers class rx.internal.util.unsafe.BaseLinkedQueueConsumerNodeRef {
-   rx.internal.util.atomic.LinkedQueueNode consumerNode;
-}
--keep class rx.schedulers.Schedulers { public static <methods>; }
--keep class rx.schedulers.ImmediateScheduler { public <methods>; }
--keep class rx.schedulers.TestScheduler { public <methods>; }
--keep class rx.schedulers.Schedulers { public static ** test(); }
--dontwarn com.moat.**
--keep class com.moat.** {
-   public protected private *;
-}
--keep class okhttp3.**
--keep class okio.**
--keep class retrofit2.**
--dontwarn okhttp3.**
+-keep class com.vungle.warren.** { *; }
+-keep class com.moat.** { *; }
+-keep class com.google.android.gms.internal.** { *; }
+-dontwarn com.vungle.warren.error.VungleError$ErrorCode
+-dontwarn org.codehaus.mojo.animal_sniffer.IgnoreJRERequirement
+-dontwarn retrofit2.Platform$Java8
+-keepattributes Signature
+-keepattributes *Annotation*
+-dontwarn sun.misc.**
+-dontwarn com.vungle.warren.**
 -dontwarn okio.**
 -dontwarn retrofit2.**
--keep class com.google.gson.**{ *;}
+-dontwarn com.moat.**
+-dontwarn com.google.android.gms.ads.identifier.**
+-dontwarn org.codehaus.mojo.animal_sniffer.IgnoreJRERequirement
+-keeppackagenames 'net.vrallev.android.cat'
+-keeppackagenames 'retrofit2.converter.gson'
+-keeppackagenames 'com.tonyodev.fetch'
+-keeppackagenames 'okhttp3.logging'
+-keeppackagenames 'okhttp3'
+-keeppackagenames 'okio'
+-keeppackagenames 'retrofit2'
 # vungle end
 
 # mobvista
 -keepattributes Signature
 -keepattributes *Annotation*
+-keep class com.mintegral.** {*;}
+-keep interface com.mintegral.** {*;}
+
 -keep class com.mobvista.** {*; }
 -keep interface com.mobvista.** {*; }
 -keep class android.support.v4.** { *; }
 -dontwarn com.mobvista.**
--keep class **.R$* { public static final int mobvista*; }
+-dontwarn com.mintegral.**
+-keep class **.R$* { public static final int mintegral*; }
 -keep class com.alphab.** {*; }
 -keep interface com.alphab.** {*; }
 # mobvista end
@@ -129,6 +119,8 @@
 -keepattributes JavascriptInterface
 -keep class android.webkit.JavascriptInterface {*;}
 -keep class com.unity3d.ads.** {*;}
+-keep class com.unity3d.services.** {*;}
+-dontwarn com.google.ar.core.**
 # unity end
 
 # appnext
@@ -152,6 +144,7 @@
 
 # ironsource
 -keep class com.ironsource.mediationsdk.IronSource
+-keep class com.moat.** { *; }
 -keepclassmembers class com.ironsource.sdk.controller.IronSourceWebView$JSInterface {
     public *;
 }
@@ -280,6 +273,8 @@
 -keep class com.google.gson.**{ *;}
 -keep class com.google.android.gms.**{*;}
 -keep class com.youappi.sdk.**{*;}
+-keep class com.moat.** { *; }
+-keep class com.ai.t.** { *; }
 -keep interface com.youappi.sdk.**{*;}
 -keep enum com.youappi.sdk.**{*;}
 -keepclassmembers class * {
@@ -330,3 +325,14 @@ public static final ** CREATOR;
 # amazon
 -keep class com.amazon.device.ads.** { *; }
 # amazon end
+
+# mobpower
+-keepattributes Signature
+-keepattributes *Annotation*
+-keep class com.mobpower.** {*; }
+-keep class com.mrad.** {*; }
+-keep class com.power.** {*; }
+-keepclassmembers class * implements android.os.Parcelable {
+    public static final ** CREATOR;
+}
+# mobpower end
