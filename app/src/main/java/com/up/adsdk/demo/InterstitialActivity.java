@@ -21,7 +21,7 @@ public class InterstitialActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_interstitial);
 
-        mInterstitialAd = new UPInterstitialAd(InterstitialActivity.this, "sample_inter_foreign");
+        mInterstitialAd = new UPInterstitialAd(InterstitialActivity.this, "sample_inter");
         mInterstitialAd.setUpInterstitialAdListener(new UPInterstitialAdListener() {
             @Override
             public void onClicked() {

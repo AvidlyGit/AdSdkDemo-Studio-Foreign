@@ -19,7 +19,7 @@ public class BannerActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_banner);
 
-        mBannerAd = new UPBannerAd(BannerActivity.this, "sample_banner_foreign");
+        mBannerAd = new UPBannerAd(BannerActivity.this, "sample_banner");
         mBannerAd.setUpBannerAdListener(new UPBannerAdListener() {
             @Override
             public void onClicked() {

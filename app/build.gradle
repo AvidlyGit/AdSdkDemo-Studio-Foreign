@@ -29,7 +29,7 @@ android {
     buildTypes {
         release {
             signingConfig signingConfigs.release
-            minifyEnabled false
+            minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
@@ -70,5 +70,6 @@ dependencies {
     compile(name: 'youappi_ads', ext: 'aar')
     compile(name: 'dap_ads_cw', ext: 'aar')
     compile(name: 'dap_ads_vd', ext: 'aar')
+    compile(name: 'displayio_ads', ext: 'aar')
 }
 
