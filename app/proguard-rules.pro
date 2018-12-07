@@ -336,6 +336,7 @@ public static final ** CREATOR;
 # mobpower end
 
 # display.io
--keep class io.display.sdk.Controller.** { *;}
--dontwarn io.display.sdk.Controller.**
+-keep class io.display.sdk.** { *;}
+-dontwarn io.display.sdk.**
 # display.io end
+
