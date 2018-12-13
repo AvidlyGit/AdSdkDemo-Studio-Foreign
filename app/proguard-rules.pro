@@ -170,11 +170,6 @@
 -dontwarn com.mopub.**
 # vk end
 
-# batmobi
--keep class com.batmobi.** { *;}
--dontwarn com.batmobi.**
-# batmobi end
-
 # inmobi
 -keepattributes SourceFile,LineNumberTable
 -keep class com.inmobi.** { *; }
