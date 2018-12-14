@@ -46,7 +46,7 @@ dependencies {
     compile 'com.android.support:recyclerview-v7:26.1.0'
     compile 'com.android.support:support-v4:26.1.0'
     compile 'com.android.support:support-annotations:26.1.0'
-    compile  'com.android.support:customtabs:26.1.0'
+    compile 'com.android.support:customtabs:26.1.0'
     compile 'com.android.support:cardview-v7:26.1.0'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     compile 'com.android.support:multidex:1.0.1'
@@ -59,18 +59,14 @@ dependencies {
 
     compile(name: 'adcolony_ads', ext: 'aar')
     compile(name: 'applovin_ads', ext: 'aar')
-    compile(name: 'batmobi_ads', ext: 'aar')
     compile(name: 'chartboost_ads', ext: 'aar')
     compile(name: 'facebook_ads', ext: 'aar')
     compile(name: 'facebook_exo_player', ext: 'aar')
     compile(name: 'ironsource_ads', ext: 'aar')
     compile(name: 'mobvista_ads', ext: 'aar')
-    compile(name: 'tapjoy_ads', ext: 'aar')
     compile(name: 'unity_ads', ext: 'aar')
     compile(name: 'vungle_ads', ext: 'aar')
     compile(name: 'youappi_ads', ext: 'aar')
-    compile(name: 'dap_ads_cw', ext: 'aar')
-    compile(name: 'dap_ads_vd', ext: 'aar')
     compile(name: 'displayio_ads', ext: 'aar')
 }
 
