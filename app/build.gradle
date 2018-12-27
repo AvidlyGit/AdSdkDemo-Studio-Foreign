@@ -55,7 +55,6 @@ dependencies {
 
     compile(name: 'UPAdsSdk_3.0.06_foreign', ext: 'aar')
     compile(name: 'gson-2.7', ext: 'jar') // for vungle and youappi
-    compile(name: 'palette-v7-26.1.0', ext: 'aar') // for dap
 
     compile(name: 'adcolony_ads', ext: 'aar')
     compile(name: 'applovin_ads', ext: 'aar')
@@ -63,7 +62,6 @@ dependencies {
     compile(name: 'facebook_ads', ext: 'aar')
     compile(name: 'facebook_exo_player', ext: 'aar')
     compile(name: 'ironsource_ads', ext: 'aar')
-    compile(name: 'mobvista_ads', ext: 'aar')
     compile(name: 'unity_ads', ext: 'aar')
     compile(name: 'vungle_ads', ext: 'aar')
     compile(name: 'youappi_ads', ext: 'aar')
