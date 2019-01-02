@@ -109,11 +109,6 @@
 -dontwarn com.google.ar.core.**
 # unity end
 
-# appnext
--keep class com.appnext.** { *; }
--dontwarn com.appnext.**
-# appnext end
-
 # applovin
 -keep class com.applovin.** { *; }
 -dontwarn com.applovin.**
@@ -178,21 +173,6 @@
 -keep class android.support.v7.** {public *;}
 # gdt end
 
-# youappi
--keep class com.google.gson.**{ *;}
--keep class com.google.android.gms.**{*;}
--keep class com.youappi.sdk.**{*;}
--keep class com.moat.** { *; }
--keep class com.ai.t.** { *; }
--keep interface com.youappi.sdk.**{*;}
--keep enum com.youappi.sdk.**{*;}
--keepclassmembers class * {
-   @android.webkit.JavascriptInterface <methods>;
-}
--dontwarn com.youappi.sdk.**
--dontwarn com.ai.t.network.**
-# youappi end
-
 # toutiao
 -keep class com.bytedance.sdk.openadsdk.** { *; }
 -keep class com.androidquery.callback.** {*;}
@@ -204,9 +184,3 @@
 # amazon
 -keep class com.amazon.device.ads.** { *; }
 # amazon end
-
-# display.io
--keep class io.display.sdk.** { *;}
--dontwarn io.display.sdk.**
-# display.io end
-
