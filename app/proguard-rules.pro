@@ -161,26 +161,6 @@
 -dontnote net.nend.android.**
 # nend end
 
-# oneway
--keepattributes *Annotation*
--keep enum mobi.oneway.sdk.* {*;}
--keep class mobi.oneway.sdk.** {*;}
-# oneway end
-
-# gdt
--keep class com.qq.e.** {*;}
--keep class android.support.v4.** {public *;}
--keep class android.support.v7.** {public *;}
-# gdt end
-
-# toutiao
--keep class com.bytedance.sdk.openadsdk.** { *; }
--keep class com.androidquery.callback.** {*;}
--dontwarn com.bytedance.sdk.**
--dontwarn com.androidquery.**
--dontwarn com.ss.android.**
-# toutiao end
-
 # amazon
 -keep class com.amazon.device.ads.** { *; }
 # amazon end
