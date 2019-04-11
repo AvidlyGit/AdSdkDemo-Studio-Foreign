@@ -2,7 +2,7 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 26
-    buildToolsVersion "26.0.1"
+    buildToolsVersion '26.0.2'
     defaultConfig {
         applicationId "adam.lean.foreign"
         minSdkVersion 15
@@ -37,7 +37,7 @@ android {
 
 repositories {
     flatDir {
-        dirs 'libs', 'ads'
+        dirs 'libs', 'ads', 'gms'
     }
 }
 
@@ -51,10 +51,16 @@ dependencies {
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     compile 'com.android.support:multidex:1.0.1'
 
-    compile 'com.google.android.gms:play-services-ads:16.0.0'
+    compile(name: 'play-services-basement-15.0.1', ext: 'aar')
+    compile(name: 'play-services-ads-identifier-15.0.1', ext: 'aar')
+    compile(name: 'play-services-ads-16.5.0', ext: 'aar')
+    compile(name: 'play-services-ads-base-16.5.0', ext: 'aar')
+    compile(name: 'play-services-ads-lite-16.5.0', ext: 'aar')
+    compile(name: 'play-services-gass-16.5.0', ext: 'aar')
 
-    compile(name: 'UPAdsSdk_3.0.06_foreign', ext: 'aar')
+    compile(name: 'UPAdsSdk_3.0.07_foreign', ext: 'aar')
     compile(name: 'gson-2.7', ext: 'jar') // for vungle
+    compile(name: 'glide-3.7.0', ext: 'jar')
 
     compile(name: 'adcolony_ads', ext: 'aar')
     compile(name: 'applovin_ads', ext: 'aar')

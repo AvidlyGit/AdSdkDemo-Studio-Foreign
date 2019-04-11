@@ -87,6 +87,7 @@
 -dontwarn sun.misc.**
 -dontwarn com.vungle.warren.**
 -dontwarn okio.**
+-dontwarn okhttp3.**
 -dontwarn retrofit2.**
 -dontwarn com.moat.**
 -dontwarn com.google.android.gms.ads.identifier.**
