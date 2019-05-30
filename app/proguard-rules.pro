@@ -121,12 +121,15 @@
 # chartboost end
 
 # playable
--keep class com.avidly.playablead.app.** { *; }
+-keep class com.sw.playablead.app.** { *; }
 # playable end
 
 # ironsource
 -keep class com.ironsource.mediationsdk.IronSource
 -keep class com.moat.** { *; }
+-dontwarn com.ironsource.mediationsdk.**
+-dontwarn com.ironsource.adapters.**
+-dontwarn com.moat.**
 -keepclassmembers class com.ironsource.sdk.controller.IronSourceWebView$JSInterface {
     public *;
 }
@@ -139,7 +142,6 @@
 -keep public class com.google.ads.** {
    public *;
 }
-
 -keep class com.ironsource.adapters.** { *;
 }
 # ironsource end

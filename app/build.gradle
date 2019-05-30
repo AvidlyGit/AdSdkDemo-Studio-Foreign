@@ -13,7 +13,7 @@ android {
         multiDexEnabled true
 
         ndk {
-            abiFilters 'armeabi-v7a', 'x86'
+            abiFilters 'arm64-v8a', 'armeabi-v7a'
         }
     }
 
@@ -51,14 +51,18 @@ dependencies {
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     compile 'com.android.support:multidex:1.0.1'
 
-    compile(name: 'play-services-basement-15.0.1', ext: 'aar')
-    compile(name: 'play-services-ads-identifier-15.0.1', ext: 'aar')
-    compile(name: 'play-services-ads-16.5.0', ext: 'aar')
-    compile(name: 'play-services-ads-base-16.5.0', ext: 'aar')
-    compile(name: 'play-services-ads-lite-16.5.0', ext: 'aar')
-    compile(name: 'play-services-gass-16.5.0', ext: 'aar')
+    compile(name: 'play-services-ads-17.2.0', ext: 'aar')
+    compile(name: 'play-services-ads-base-17.2.0', ext: 'aar')
+    compile(name: 'play-services-ads-lite-17.2.0', ext: 'aar')
+    compile(name: 'play-services-gass-17.2.0', ext: 'aar')
+    compile(name: 'play-services-basement-16.0.1', ext: 'aar')
+    compile(name: 'play-services-ads-identifier-16.0.0', ext: 'aar')
+    compile(name: 'play-services-measurement-base-16.3.0', ext: 'aar')
+    compile(name: 'play-services-measurement-sdk-api-16.3.0', ext: 'aar')
 
-    compile(name: 'UPAdsSdk_3.0.07_foreign', ext: 'aar')
+    compile(name: 'UPAdsSdk_3.0.07.4_foreign', ext: 'aar')
+    compile(name: 'playable_ads', ext: 'aar')
+
     compile(name: 'gson-2.7', ext: 'jar') // for vungle
     compile(name: 'glide-3.7.0', ext: 'jar')
 
